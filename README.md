@@ -1,7 +1,7 @@
 # Twitter Sentiment Analysis
 
-![Launch Event](https://media.gettyimages.com/id/1239251407/photo/spain-madrid-xiaomi-new-products-launch-event.jpg)
-![Launch Event](https://static01.nyt.com/images/2017/11/08/business/08TWITTER1/08TWITTER1-superJumbo.jpg)
+![Launch Event](https://media.gettyimages.com/id/527764362/photo/a-general-view-as-volunteers-gathered-at-ucl-to-mark-the-launch-of-a-brand-new-mobile-phone.jpg)
+![Launch Event](https://static01.nyt.com/images/2017/11/08/business/08TWITTER1/08TWITTER1-superJumbo.jpg?quality=75&auto=webp)
 
 # Social Media Marketing
 
