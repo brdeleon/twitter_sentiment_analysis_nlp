@@ -7,7 +7,7 @@ Twitter is one of the most popular and influential social networking platforms a
 
 We will use tweets and a sentiment classification model to create a better understanding of customer sentiment and provide actionable insights to increase customer satisfaction and strengthen marketing initiatives.
 
-<img src="https://english.news.cn/20220316/aed3e20f331940c4b8c2b16c1f15b2e6/20220316aed3e20f331940c4b8c2b16c1f15b2e6_96e22deb2-5cd2-4a33-9335-c119411a9451.jpg.jpg" alt="Xinhua News Image of Product Launch" style="width: 500px;"/>
+<img src="https://english.news.cn/20220316/aed3e20f331940c4b8c2b16c1f15b2e6/20220316aed3e20f331940c4b8c2b16c1f15b2e6_96e22deb2-5cd2-4a33-9335-c119411a9451.jpg.jpg" alt="Xinhua News Image of Product Launch" style="width: 550px;"/>
 
 
 ## Business Problem
@@ -81,6 +81,7 @@ Google can use this classification model to identify the emotion of tweets about
 
 ![google negative cloud](/google%20negative%20word%20cloud.png)
 
+<b>Google Positive Hashtags</b>
 ![google positive graph](/google%20positive%20hashtag.png)
 
 ### Next Steps
