@@ -48,18 +48,18 @@ We built a <b>logistic regression</b> model that is able to classify a tweet bas
 
 We can determine the sentiment of a tweet based on engineered features at an accuracy of 88% and at an f1 macro score of 73%.
 
-`------------------------------------------------------------
-Logistic Regression CLASSIFICATION REPORT TESTING 
-------------------------------------------------------------
-              precision    recall  f1-score   support
-
-    Negative       0.59      0.29      0.39       148
-     Neutral       0.93      0.97      0.95      1126
-    Positive       0.84      0.87      0.85       706
-
-    accuracy                           0.88      1980
-   macro avg       0.79      0.71      0.73      1980
-weighted avg       0.87      0.88      0.87      1980`
+`------------------------------------------------------------`<br>
+`Logistic Regression CLASSIFICATION REPORT TESTING` <br>
+`------------------------------------------------------------`<br>
+`              precision    recall  f1-score   support`<br>
+``<br>
+`    Negative       0.59      0.29      0.39       148`<br>
+`     Neutral       0.93      0.97      0.95      1126`<br>
+`    Positive       0.84      0.87      0.85       706`<br>
+``<br>
+`    accuracy                           0.88      1980`<br>
+`   macro avg       0.79      0.71      0.73      1980`<br>
+`weighted avg       0.87      0.88      0.87      1980`<br>
 
 ![final model](/finalmodel.png)
 
