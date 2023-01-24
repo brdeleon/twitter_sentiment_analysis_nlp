@@ -81,7 +81,9 @@ Google can use this classification model to identify the emotion of tweets about
 
 ![google negative cloud](/google%20negative%20word%20cloud.png)
 
+<br>
 <b>Google Positive Hashtags</b>
+<br>
 ![google positive graph](/google%20positive%20hashtag.png)
 
 ### Next Steps
