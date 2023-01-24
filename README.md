@@ -1,10 +1,6 @@
 # Twitter Sentiment Analysis
 
-![Launch Event](https://english.news.cn/20220316/aed3e20f331940c4b8c2b16c1f15b2e6/20220316aed3e20f331940c4b8c2b16c1f15b2e6_96e22deb2-5cd2-4a33-9335-c119411a9451.jpg.jpg)
-
-
-
-![Launch Event](https://static01.nyt.com/images/2017/11/08/business/08TWITTER1/08TWITTER1-superJumbo.jpg?quality=75&auto=webp)
+<img src="https://english.news.cn/20220316/aed3e20f331940c4b8c2b16c1f15b2e6/20220316aed3e20f331940c4b8c2b16c1f15b2e6_96e22deb2-5cd2-4a33-9335-c119411a9451.jpg.jpg" alt="Xinhua News Image of Product Launch" style="width: 400px;"/>
 
 # Social Media Marketing
 
@@ -12,108 +8,91 @@
 
 ## Overview
 
-Twitter is one of the most popular and influential social networking platforms available today, with over 200 million monetizable daily active users [(mDAU)](). Twitter users can send short 280-character messages called tweets to their followers. Twitter users can follow other users, as well as read and share their tweets. Twitter's emphasis on real-time information allows for news to quickly and organically reach large populations.
+Twitter is one of the most popular and influential social networking platforms available today, with over 200 million monetizable daily active users [(mDAU)](https://www.statista.com/statistics/970920/monetizable-daily-active-twitter-users-worldwide/). Twitter's emphasis on real-time information allows for news to quickly and organically reach large populations. Twitter's quick and short message sharing allows for loose and easy engagement amongst all types of personalities, public figures, brands, and potential consumers.
 
-
-
-(one or two sentences about why tweets or sentiment analysis intro) A study held in 2022 revealed that Twitter users regularly use Twitter for news.(2022)
-Researchers found that of nearly 10 million clicks in a random sample of news stories posted on Twitter, 61% of the clicks
-
-
-Unfortunately, the city resources available to address traffic safety are limited. 
-
-We will use tweets and their sentiment classification to get insights to improve customer satisfaction and marketing campaigns.
-Data Source¶
-
-We, the Vision Zero initiative, are committed to working with the City of Chicago to eliminate fatalities and serious injuries from traffic crashes. 
-
----
-
-Traffic deaths are preventable. The City of Chicago has had at least 800,000 yearly reported crash incidents since 2017 and at least 100 yearly reported crash incidents with at least one fatality since 2018. The City of Chicago believes everyone has the right to access to safe streets. However, Chicago has seen a general increase in incidents with at least one fatality over the years even though there has been a general decrease in number of crash incidents. 
-
+We will use tweets and a sentiment classification model to create a better understanding of customer sentiment and provide actionable insights to increase customer satisfaction and strengthen marketing initiatives.
 
 ## Business Problem
 
-Google's Marketing & Communications team wants to improve their social media communications strategy. For fresh eyes, Google's Marketing & Communications team has decided to outsource and contract us to help develop a data backed social media communications strategy for an upcoming launch. Google wants help with:
+Google's Marketing & Communications team wants to improve their social media communications strategy ahead of an exciting launch. Google's Marketing & Communications team has contracted us to help develop a data backed tool to help with their social media communications strategy.
 
- 1. Improving customer satisfaction
- 2. Improving marketing campaigns
+Google wants a tool to help with: 
+1. Improving customer satisfaction 
+2. Improving marketing campaigns
 
+Unfortunately, classifying tweets and mining for tweets with only hashtags can be tedious and costly. We will build a model that can efficiently classify tweets as positive, negative, or neutral sentiment. The sentiment classification will also allow us to produce WordClouds that display the top words and phrases associated with each sentiment regarding the brand or product and bar graphs of the top hashtags represented in each sentiment. By classifying tweets into sentiment, Google will be able to extract patterns with more nuance. 
 
 ## Data
 
-Our dataset contains tweets following a Google and Apple product launch at a SXSW event, the tweets were gathered by CrowdFlower and were evaluated and labeled for sentiment through crowdsource. Contributors were also asked to say which brand or product was the target of that sentiment. The dataset contains over 9000 rows and be found [here](https://data.world/crowdflower/brands-and-product-emotions). From the provided data, we engineered additional features.
+The dataset contains tweets from a popular annual conference known to showcase innovation called South by South West ("SXSW") and were identified using the hashtag: #SXSW. The tweets were gathered by CrowdFlower and were evaluated and labeled for sentiment through crowdsource. Contributors were also asked to say which brand or product was the target of that sentiment. The dataset contains over 9000 tweets and can be found [here](https://data.world/crowdflower/brands-and-product-emotions). From the provided data, we engineered additional features.
 
 ## Methods
 
+1. Load the Data
 
+2. Perform Data Cleaning and Exploratory Data Analysis with nltk
+Our data preprocessing will include removing: punctuation, special characters, and stop words, as well as converting all text to lowercase and lemmatizing. We will compare the raw word frequency distributions of each category.
 
-We will use the data to create a sentiment classifying machine learning model. Our multiclass classification model will help identify what features are most relevant in sentiment analysis. Our data cleaning process will include removing: punctuation, special characters, and numbers, as well as converting all text to lowercase. Cleaning and normalizing the text prevents our models from being influenced by minor variations. In order for our models to interpret the tweets, we transform the text data into numerical features through a vectorizer. 
+3. Build and Evaluate a Baseline Model 
+Ultimately all data must be in numeric form in order to be able to fit a scikit-learn model. We'll use a sklearn tool, TfidfVectorizer, to convert all tweet text data into a vectorized format.
 
+4. Iteratively Perform and Evaluate Preprocessing and Feature Engineering Techniques
+Investigate different algorithms and techniques to determine whether they should be part the final model.
 
+5. Evaluate a Final Model on the Test Set
 
-
-"In language processing,
-the vectors x are derived from textual data,
-in order to reflect various linguistic properties of the text."
-
-- Yoav Goldberg
 
 ## Results
 
 We built a <b>logistic regression</b> model that is able to classify a tweet based on sentiment.  
 
-We can determine the sentiment of a tweet based on engineered features at an accuracy of 88% and at an f1 macro score of 75%. We have determined which features are most important in classifying sentiment:
+We can determine the sentiment of a tweet based on engineered features at an accuracy of 88% and at an f1 macro score of 73%.
 
-`FIRST_CRASH_TYPE0.389 +/- 0.004` <br> 
-`LOCATION0.267 +/- 0.001` <br>
-`TRAFFICWAY_TYPE0.183 +/- 0.002` <br>
-`CRASH_MONTH0.107 +/- 0.002` <br>
-`CRASH_HOUR0.103 +/- 0.002` <br>
-`CRASH_DAY_OF_WEEK0.097 +/- 0.002` <br>
-`TRAFFIC_CONTROL_DEVICE0.086 +/- 0.002` <br>
-`DEVICE_CONDITION0.080 +/- 0.002` <br>
-`LIGHTING_CONDITION0.073 +/- 0.002` <br>
-`SPEED_LIMIT0.048 +/- 0.001` <br>
-`ROADWAY_SURFACE_COND0.043 +/- 0.001` <br>
-`WEATHER_CONDITION0.025 +/- 0.001` <br>
-`VEHICLE_TYPE0.015 +/- 0.001`
+`------------------------------------------------------------
+Logistic Regression CLASSIFICATION REPORT TESTING 
+------------------------------------------------------------
+              precision    recall  f1-score   support
 
-![final model](/models.png)
+    Negative       0.59      0.29      0.39       148
+     Neutral       0.93      0.97      0.95      1126
+    Positive       0.84      0.87      0.85       706
+
+    accuracy                           0.88      1980
+   macro avg       0.79      0.71      0.73      1980
+weighted avg       0.87      0.88      0.87      1980`
+
+![final model](/finalmodel.png)
+
+We have determined which features are most important in classifying sentiment:
+
+`brand   0.307 +/- 0.011` <br>
+`clean_tweets 0.060 +/- 0.002` <br>
+`stopword_count 0.016 +/- 0.004` <br>
+`hashtags 0.014 +/- 0.002` <br>
+`avg_wordlength 0.013 +/- 0.004` <br>
+`stopwords_vs_words 0.011 +/- 0.003` <br>
+`sent_count 0.010 +/- 0.005` <br>
+`unique_word_count 0.007 +/- 0.003` <br>
+`punct_count 0.003 +/- 0.001`
 
 
 ## Conclusions
 
-to use this predictive model to identify the emotion of tweets about their conference. Using the predicted emotions, South by Southwest can analyze the words and phrases asscociated with the emotions to better understand audience reception and anticipation of the event.
-
-Our recommendations for Google's Marketing & Communications team to improve their social media communications strategy
-are backed by data and focus, recommends the following:
-
-- **Improving Customer Satisfaction** 
-
-reaching out directly
-retweets
+Google can use this classification model to identify the emotion of tweets about a particular topic, the topic could be past launches, new products, or the brand itself. With Google's upcoming launch, Google can analyze the words, phrases, and hashtags of past launches by sentiment to better understand the audience's reception to the launch to help shape the strategy for the new launch. Equally, Google can use this model during the launch for real time feedback and after the launch to analyze for feedback. By classifying tweets into sentiment classes, Google will be able to extract more meaningful patterns with the help of word clouds and graphs. 
 
 
-- **Improving Marketing Campaigns** 
+![final model](/google negative word cloud.png)
 
-popular positive
-several days
-
-competitiors, what is working 
-similarly what to avoid
-
-hashtags
-
+![final model](/google positive hashtag.png)
 
 ### Next Steps
 
-Further analyses could yield additional insights to further improve insight quality:
-
-- Better data collection could significantly improve our prediction ability. Unfortunately, features worthy of attention were dropped due to excessive nulls or unknowns. Age and sex are some features that were dropped due to having almost 90% null values. Weather and safety equipment are other possibly important features that were dropped to due to excessive nulls or unknowns.
-- Widen the crash date range to include crashes from more years.
-- Use location points to create crash incident maps to identify if there are any top locations that cluster near each other for priority identification.
-- Conduct a more extensive grid search on random forest focusing on those parameters that can address our data imbalance like class weight.
+ - Better data collection could significantly improve our prediction ability. We have an imbalanced dataset with majority "Neutral" sentiment values. More data, particularly for the minority classes could improve the model's performance. Additionally, some of the tweets were mislabeled, for next steps our model could benefit from training on more accurate labeled tweets.
+ - Include new data by web scraping tweets so that we are able to collect usernames of tweet poster and so that our model is able to train on newer and larger data.
+ - Use specific tweet tokenizer so that our model is able to handle emojis.
+ - Engineer additional features like assigning a sentiment intensity score to each tweet using nltk' vader package.
+ - Given the high weight the random forest algorithm gives to the hashtags feature, we should further inspect it for patterns.
+ - Use feature importance to improve our model, removing those features with lower scores.
 
 ## For More Information
 
@@ -121,7 +100,9 @@ See the full analysis in the [Jupyter Notebook](</Tweet_Sentiment_Modeling.ipynb
 
 For additional info, contact Brenda De Leon at [brendardeleon@gmail.com](mailto:brendardeleon@gmail.com)
 
-<img src="https://activetrans.org/busreports/wp-content/uploads/2015/04/vision_zero_logo.jpg" alt="visionlogo" style="width: 200px;"/>
+
+<img src="https://static01.nyt.com/images/2017/11/08/business/08TWITTER1/08TWITTER1-superJumbo.jpg" alt="The New York Times " style="width: 400px;"/>
+
 
 ## Repository Structure
 
@@ -135,40 +116,3 @@ For additional info, contact Brenda De Leon at [brendardeleon@gmail.com](mailto:
 ├── Twiter Sentiment Presentation.pdf
 └── README.md
 ```
-
-###### Requirements
-
-1. Load the Data
-Use pandas and sklearn.datasets to load the train and test data into appropriate data structures. Then get a sense of what is in this dataset by visually inspecting some samples.
-
-2. Perform Data Cleaning and Exploratory Data Analysis with nltk
-Standardize the case of the data and use a tokenizer to convert the full posts into lists of individual words. Then compare the raw word frequency distributions of each category.
-
-3. Build and Evaluate a Baseline Model with TfidfVectorizer and MultinomialNB
-Ultimately all data must be in numeric form in order to be able to fit a scikit-learn model. So we'll use a tool from sklearn.feature_extraction.text to convert all data into a vectorized format.
-
-Initially we'll keep all of the default parameters for both the vectorizer and the model, in order to develop a baseline score.
-
-4. Iteratively Perform and Evaluate Preprocessing and Feature Engineering Techniques
-Here you will investigate three techniques, to determine whether they should be part of our final modeling process:
-
-Removing stopwords
-Using custom tokens
-Domain-specific feature engineering
-Increasing max_features
-5. Evaluate a Final Model on the Test Set
-Once you have chosen a final modeling process, fit it on the full training data and evaluate it on the test data.
-
-
-
-## Modeling
-
-We will iteratively perform and evaluate preprocessing and feature engineering techniques. We will investigate different techniques to determine whether they should be part of our final modeling process:
-
-Domain-specific feature engineering
-Increasing max_features
-Balancing class weight
-
-
-
-The data needs to be able to fit a scikit-learn model. We will standardize the case of the data, use a tokenizer to convert the full tweets into lists of individual words. We will then compare the raw word frequency distributions of each sentiment. 
