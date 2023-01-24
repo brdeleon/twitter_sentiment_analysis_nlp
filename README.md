@@ -79,9 +79,9 @@ We have determined which features are most important in classifying sentiment:
 Google can use this classification model to identify the emotion of tweets about a particular topic, the topic could be past launches, new products, or the brand itself. With Google's upcoming launch, Google can analyze the words, phrases, and hashtags of past launches by sentiment to better understand the audience's reception to the launch to help shape the strategy for the new launch. Equally, Google can use this model during the launch for real time feedback and after the launch to analyze for feedback. By classifying tweets into sentiment classes, Google will be able to extract more meaningful patterns with the help of word clouds and graphs. 
 
 
-![final model](/google\ negative\ word\ cloud.png)
+![google negative cloud](/google%20negative%20word%20cloud.png)
 
-![final model](/google\ positive\ hashtag.png)
+![google positive graph](/google%20positive%20hashtag.png)
 
 ### Next Steps
 
