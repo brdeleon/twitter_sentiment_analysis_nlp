@@ -1,9 +1,4 @@
 # Twitter Sentiment Analysis
-
-<img src="https://english.news.cn/20220316/aed3e20f331940c4b8c2b16c1f15b2e6/20220316aed3e20f331940c4b8c2b16c1f15b2e6_96e22deb2-5cd2-4a33-9335-c119411a9451.jpg.jpg" alt="Xinhua News Image of Product Launch" style="width: 400px;"/>
-
-# Social Media Marketing
-
 **Author**: [Brenda De Leon](mailto:brendardeleon@gmail.com)
 
 ## Overview
@@ -11,6 +6,9 @@
 Twitter is one of the most popular and influential social networking platforms available today, with over 200 million monetizable daily active users [(mDAU)](https://www.statista.com/statistics/970920/monetizable-daily-active-twitter-users-worldwide/). Twitter's emphasis on real-time information allows for news to quickly and organically reach large populations. Twitter's quick and short message sharing allows for loose and easy engagement amongst all types of personalities, public figures, brands, and potential consumers.
 
 We will use tweets and a sentiment classification model to create a better understanding of customer sentiment and provide actionable insights to increase customer satisfaction and strengthen marketing initiatives.
+
+<img src="https://english.news.cn/20220316/aed3e20f331940c4b8c2b16c1f15b2e6/20220316aed3e20f331940c4b8c2b16c1f15b2e6_96e22deb2-5cd2-4a33-9335-c119411a9451.jpg.jpg" alt="Xinhua News Image of Product Launch" style="width: 500px;"/>
+
 
 ## Business Problem
 
@@ -52,11 +50,11 @@ We can determine the sentiment of a tweet based on engineered features at an acc
 `Logistic Regression CLASSIFICATION REPORT TESTING` <br>
 `------------------------------------------------------------`<br>
 `              precision    recall  f1-score   support`<br>
-``<br>
+<br>
 `    Negative       0.59      0.29      0.39       148`<br>
 `     Neutral       0.93      0.97      0.95      1126`<br>
 `    Positive       0.84      0.87      0.85       706`<br>
-``<br>
+<br>
 `    accuracy                           0.88      1980`<br>
 `   macro avg       0.79      0.71      0.73      1980`<br>
 `weighted avg       0.87      0.88      0.87      1980`<br>
