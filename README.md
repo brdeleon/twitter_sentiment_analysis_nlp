@@ -9,14 +9,13 @@ We will use tweets and a sentiment classification model to create a better under
 
 <img src="https://english.news.cn/20220316/aed3e20f331940c4b8c2b16c1f15b2e6/20220316aed3e20f331940c4b8c2b16c1f15b2e6_96e22deb2-5cd2-4a33-9335-c119411a9451.jpg.jpg" alt="Xinhua News Image of Product Launch" style="width: 550px;"/>
 
-
 ## Business Problem
 
 Google's Marketing & Communications team wants to improve their social media communications strategy ahead of an exciting launch. Google's Marketing & Communications team has contracted us to help develop a data backed tool to help with their social media communications strategy.
 
 Google wants a tool to help with: 
-1. Improving customer satisfaction 
-2. Improving marketing campaigns
+1. Improving Customer Satisfaction 
+2. Improving Marketing Campaigns
 
 Unfortunately, classifying tweets and mining for tweets with only hashtags can be tedious and costly. We will build a model that can efficiently classify tweets as positive, negative, or neutral sentiment. The sentiment classification will also allow us to produce WordClouds that display the top words and phrases associated with each sentiment regarding the brand or product and bar graphs of the top hashtags represented in each sentiment. By classifying tweets into sentiment, Google will be able to extract patterns with more nuance. 
 
@@ -39,10 +38,9 @@ Investigate different algorithms and techniques to determine whether they should
 
 5. Evaluate a Final Model on the Test Set
 
-
 ## Results
 
-We built a <b>logistic regression</b> model that is able to classify a tweet based on sentiment.  
+We built a <b>Logistic Regression</b> model that is able to classify a tweet based on sentiment.  
 
 We can determine the sentiment of a tweet based on engineered features at an accuracy of 88% and at an f1 macro score of 73%.
 
@@ -73,7 +71,6 @@ We have determined which features are most important in classifying sentiment:
 `unique_word_count 0.007 +/- 0.003` <br>
 `punct_count 0.003 +/- 0.001`
 
-
 ## Conclusions
 
 Google can use this classification model to identify the emotion of tweets about a particular topic, the topic could be past launches, new products, or the brand itself. With Google's upcoming launch, Google can analyze the words, phrases, and hashtags of past launches by sentiment to better understand the audience's reception to the launch to help shape the strategy for the new launch. Equally, Google can use this model during the launch for real time feedback and after the launch to analyze for feedback. By classifying tweets into sentiment classes, Google will be able to extract more meaningful patterns with the help of word clouds and graphs. 
@@ -85,7 +82,7 @@ Google can use this classification model to identify the emotion of tweets about
 <b>Google Positive Hashtags</b>
 <br>
 
-![google positive graph](/google%20positive%20hashtag.png);
+![google positive graph](/google%20positive%20hashtag.png)
 
 ### Next Steps
 
@@ -101,10 +98,6 @@ Google can use this classification model to identify the emotion of tweets about
 See the full analysis in the [Jupyter Notebook](</Tweet_Sentiment_Modeling.ipynb>) or review this [presentation](</Twiter Sentiment Presentation.pdf>).
 
 For additional info, contact Brenda De Leon at [brendardeleon@gmail.com](mailto:brendardeleon@gmail.com)
-
-
-<img src="https://static01.nyt.com/images/2017/11/08/business/08TWITTER1/08TWITTER1-superJumbo.jpg" alt="The New York Times " style="width: 400px;"/>
-
 
 ## Repository Structure
 
