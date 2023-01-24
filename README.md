@@ -44,6 +44,8 @@ We built a <b>Logistic Regression</b> model that is able to classify a tweet bas
 
 We can determine the sentiment of a tweet based on engineered features at an accuracy of 88% and at an f1 macro score of 73%.
 
+![final model](/finalmodel.png)
+
 `------------------------------------------------------------`<br>
 `Logistic Regression CLASSIFICATION REPORT TESTING` <br>
 `------------------------------------------------------------`<br>
@@ -56,8 +58,6 @@ We can determine the sentiment of a tweet based on engineered features at an acc
 `    accuracy                           0.88      1980`<br>
 `   macro avg       0.79      0.71      0.73      1980`<br>
 `weighted avg       0.87      0.88      0.87      1980`<br>
-
-![final model](/finalmodel.png)
 
 We have determined which features are most important in classifying sentiment:
 
@@ -76,7 +76,7 @@ We have determined which features are most important in classifying sentiment:
 Google can use this classification model to identify the emotion of tweets about a particular topic, the topic could be past launches, new products, or the brand itself. With Google's upcoming launch, Google can analyze the words, phrases, and hashtags of past launches by sentiment to better understand the audience's reception to the launch to help shape the strategy for the new launch. Equally, Google can use this model during the launch for real time feedback and after the launch to analyze for feedback. By classifying tweets into sentiment classes, Google will be able to extract more meaningful patterns with the help of word clouds and graphs. 
 
 
-![google negative cloud](/google%20negative%20word%20cloud.png);
+![google negative cloud](/google%20negative%20word%20cloud.png)
 
 <br>
 <b>Google Positive Hashtags</b>
