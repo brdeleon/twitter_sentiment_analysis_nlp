@@ -36,7 +36,7 @@ Ultimately all data must be in numeric form in order to be able to fit a scikit-
 4. Iteratively Perform and Evaluate Preprocessing and Feature Engineering Techniques
 Investigate different algorithms and techniques to determine whether they should be part the final model.
 
-5. Evaluate a Final Model on the Test Set
+5. Evaluate a Final Model on the Test Set.
 
 ## Results
 
