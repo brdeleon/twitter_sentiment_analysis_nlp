@@ -47,7 +47,7 @@ We can determine the sentiment of a tweet based on engineered features at an acc
 ![final model](/finalmodel.png)
 
 `------------------------------------------------------------`<br>
-`Logistic Regression CLASSIFICATION REPORT TESTING` <br>
+`Logistic Regression(Final Model) CLASSIFICATION REPORT TESTING` <br>
 `------------------------------------------------------------`<br>
 `              precision    recall  f1-score   support`<br>
 <br>
@@ -79,10 +79,8 @@ Google can use this classification model to identify the emotion of tweets about
 ![google negative cloud](/google%20negative%20word%20cloud.png)
 
 <br>
-<b>Google Positive Hashtags</b>
-<br>
 
-![google positive graph](/google%20positive%20hashtag.png)
+![google positive graph](/googlepositivehashtag.png)
 
 ### Next Steps
 
