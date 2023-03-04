@@ -1,4 +1,7 @@
-# Twitter Sentiment Analysis
+# Leveraging NLP for Customer Sentiment Analysis on Twitter
+
+## Uncovering Customer Sentiment to Improve Marketing and Boost Satisfaction
+
 **Author**: [Brenda De Leon](mailto:brendardeleon@gmail.com)
 
 ## Overview
@@ -93,7 +96,7 @@ Google can use this classification model to identify the emotion of tweets about
 
 ## For More Information
 
-See the full analysis in the [Jupyter Notebook](</Tweet_Sentiment_Modeling.ipynb>) or review this [presentation](</Twiter Sentiment Presentation.pdf>).
+See the full analysis in the [Jupyter Notebook](</Tweet_Sentiment_Modeling.ipynb>) or review this [presentation](</Twiter_Sentiment_Presentation.pdf>).
 
 For additional info, contact Brenda De Leon at [brendardeleon@gmail.com](mailto:brendardeleon@gmail.com)
 
